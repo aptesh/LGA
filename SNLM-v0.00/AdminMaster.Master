@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="SNLM_v0._00.AdminMaster" %>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | SNLM </title>
+    <link rel="stylesheet" href="assets\css\bootstrap.min.css">
+    <link rel="stylesheet" href="STYLECSS.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+          .Grid {
+                border-color: gray;
+                height: auto;
+                width: auto;
+                font-size: 18px;
+          }
+          .Grid th {
+              text-align: center;
+              padding: 10px;
+              background-color: var(--primary);
+              color: #fff;
+              font-family: 'Poppins', sans-serif;
+          }
+          .Grid td{
+              padding: 5px;
+              text-align: center;
+              background-color: #fff;
+              height: 20px;
+          }
+      </style>
+   </head>
+<body id="Preview">
+    <form id="Form1" runat="server">
+        <div class="sidebar">
+            <div class="logo-details">
+                <img src="images/lgo.png" alt="" style="padding: 16px;"/>
+                <span class="logo_name">Samarth Nivas</span>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="Dashboard.aspx" id="menu1" onclick="selectdb()">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="links_name">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="GestDetails.aspx" id="menu2" onclick="selectgd()">
+                        <i class='bx bx-list-ul'></i>
+                        <span class="links_name">Guest Detais</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Bills.aspx" id="menu3" onclick="selectbl()">
+                        <i class='bx bx-pie-chart-alt-2'></i>
+                        <span class="links_name">Bill</span>
+                    </a>
+                </li>
+                <li class='disabled'>
+                    <a href="Advertise.aspx">
+                        <i class='bx bx-heart'></i>
+                        <span class="links_name">Advertise page</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Reports.aspx">
+                        <i class='bx bx-book-alt'></i>
+                        <span class="links_name">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Setting.aspx" id="menu4">
+                        <i class='bx bx-user'></i>
+                        <span class="links_name">Setting</span>
+                    </a>
+                </li>
+                <li class="log_out">
+                    <a href="Login.aspx">
+                        <i class='bx bx-log-out'></i>
+                        <span class="links_name">Log out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <section class="home-section">
+            <nav>
+                <div class="sidebar-button">
+                    <i class='bx bx-menu sidebarBtn'></i>
+                    <span class="dashboard">
+                        <asp:Label ID="Label1" runat="server" Text="Dashboard"></asp:Label></span>
+                </div>
+                <div class="profile-details">
+                    <img src="images/PIKA_MUG.png" alt="">
+                    <span class="admin_name">Name</span>
+                </div>
+            </nav>
+        </section>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <script type="text/javascript">
+
+            var sidebar = document.querySelector(".sidebar");
+            var sidebarBtn = document.querySelector(".sidebarBtn");
+            sidebarBtn.onclick = function() {
+                sidebar.classList.toggle("active");
+                if(sidebar.classList.contains("active")){
+                    sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+                }else
+                    sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+            }
+            function printbill(paravalue) {
+                var backup = document.body.innerHTML;
+                var divcontent = document.getElementById(paravalue).innerHTML;
+                document.body.innerHTML = divcontent;
+                window.print();
+                document.body.innerHTML = backup;
+            }
+        </script>
+        <script src="assets\js\bootstrap.bundle.min.js"></script>
+    </form>
+</body>
+</html>
