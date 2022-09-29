@@ -1,5 +1,0 @@
-D:\Our Work\BackupSN\SNLM0.0.0\SNLM-v0.00\SNLM-v0.00\SNLM-v0.00\bin\SNLM-v0.00.dll
-D:\Our Work\BackupSN\SNLM0.0.0\SNLM-v0.00\SNLM-v0.00\SNLM-v0.00\bin\SNLM-v0.00.pdb
-D:\Our Work\BackupSN\SNLM0.0.0\SNLM-v0.00\SNLM-v0.00\SNLM-v0.00\obj\Release\SNLM-v0.00.csprojResolveAssemblyReference.cache
-D:\Our Work\BackupSN\SNLM0.0.0\SNLM-v0.00\SNLM-v0.00\SNLM-v0.00\obj\Release\SNLM-v0.00.dll
-D:\Our Work\BackupSN\SNLM0.0.0\SNLM-v0.00\SNLM-v0.00\SNLM-v0.00\obj\Release\SNLM-v0.00.pdb
