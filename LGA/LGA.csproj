@@ -57,16 +57,48 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Counter Connection.aspx" />
     <Content Include="Counter refile.aspx" />
+    <Content Include="Delivary Man Data.aspx" />
+    <Content Include="DellyReductionData.aspx" />
+    <Content Include="Incoming Stock.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Counter Connection.aspx.cs">
+      <DependentUpon>Counter Connection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Counter Connection.aspx.designer.cs">
+      <DependentUpon>Counter Connection.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Counter refile.aspx.cs">
       <DependentUpon>Counter refile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Counter refile.aspx.designer.cs">
       <DependentUpon>Counter refile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Delivary Man Data.aspx.cs">
+      <DependentUpon>Delivary Man Data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Delivary Man Data.aspx.designer.cs">
+      <DependentUpon>Delivary Man Data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DellyReductionData.aspx.cs">
+      <DependentUpon>DellyReductionData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DellyReductionData.aspx.designer.cs">
+      <DependentUpon>DellyReductionData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incoming Stock.aspx.cs">
+      <DependentUpon>Incoming Stock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Incoming Stock.aspx.designer.cs">
+      <DependentUpon>Incoming Stock.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

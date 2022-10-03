@@ -11,14 +11,13 @@ using System.Configuration;
 
 namespace LGA
 {
-    public partial class Counter_refile : System.Web.UI.Page
+    public partial class DellyReductionData : System.Web.UI.Page
     {
         SqlConnection con;
-         
+
         protected void Page_Load(object sender, EventArgs e)
         {
             con = new SqlConnection(ConfigurationManager.ConnectionStrings["LGA"].ConnectionString);
-
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -26,16 +25,14 @@ namespace LGA
             try
             {
                 con.Open();
-                String insert = "insert into CounterRefill values(@CylType,@ConsumerNo,@Name,@Filled,@Empty,@Amount,@DayEndTotal,@Date)";
+                String insert = "insert into DellyData values(@Source,@Filled,@Empty,@Pending,@Date)";
                 SqlCommand cmd = new SqlCommand(insert, con);
-                cmd.Parameters.AddWithValue("@CylType", DropDownList1.Text);
-                cmd.Parameters.AddWithValue("@ConsumerNo", TextBox5.Text);
-                cmd.Parameters.AddWithValue("@Name", nametxt.Text);
-                cmd.Parameters.AddWithValue("@Filled", TextBox2.Text);
-                cmd.Parameters.AddWithValue("@Empty", TextBox3.Text);
-                cmd.Parameters.AddWithValue("@Amount", TextBox4.Text);
-                cmd.Parameters.AddWithValue("@DayEndTotal", TextBox6.Text);
+                cmd.Parameters.AddWithValue("@Source", DropDownList1.Text);
+                cmd.Parameters.AddWithValue("@Filled", TextBox1.Text);
+                cmd.Parameters.AddWithValue("@Empty", TextBox2.Text);
+                cmd.Parameters.AddWithValue("@Pending", TextBox2.Text);
                 cmd.Parameters.AddWithValue("@Date", DateTime.Now);
+               
 
                 cmd.ExecuteNonQuery();
                 Response.Write("<script>alert('Data Entered ')</script>");
@@ -47,11 +44,5 @@ namespace LGA
                 Response.Write(ex);
             }
         }
-
-        
-
-       
-
-        
     }
 }

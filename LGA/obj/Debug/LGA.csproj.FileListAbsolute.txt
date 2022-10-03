@@ -3,3 +3,8 @@ C:\Users\Sourabh\Desktop\lgarepo\LGA\bin\LGA.pdb
 C:\Users\Sourabh\Desktop\lgarepo\LGA\obj\Debug\LGA.csprojResolveAssemblyReference.cache
 C:\Users\Sourabh\Desktop\lgarepo\LGA\obj\Debug\LGA.dll
 C:\Users\Sourabh\Desktop\lgarepo\LGA\obj\Debug\LGA.pdb
+C:\Users\Sourabh\Desktop\Try111\LGA\bin\LGA.dll
+C:\Users\Sourabh\Desktop\Try111\LGA\bin\LGA.pdb
+C:\Users\Sourabh\Desktop\Try111\LGA\obj\Debug\LGA.csprojResolveAssemblyReference.cache
+C:\Users\Sourabh\Desktop\Try111\LGA\obj\Debug\LGA.dll
+C:\Users\Sourabh\Desktop\Try111\LGA\obj\Debug\LGA.pdb
