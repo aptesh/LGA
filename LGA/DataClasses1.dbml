@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LGA" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-80P4E9U\SQLEXPRESS01;Initial Catalog=LGA;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="LGAConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CounterConection" Member="CounterConections">
+    <Type Name="CounterConection">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ConnectionType" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CylGiven" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Filled" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Empty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Regulator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Trolly" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Stove" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RuberTube" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DayEndTotal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CounterRefill" Member="CounterRefills">
+    <Type Name="CounterRefill">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CylType" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ConsumerNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Filled" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Empty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DayEndTotal" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Daate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeliveryManData" Member="DeliveryManDatas">
+    <Type Name="DeliveryManData">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DeliveryManName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Area" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Cost" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Filled" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Empty" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Online" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DayEndTotal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DellyData" Member="DellyDatas">
+    <Type Name="DellyData">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Source" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Filled" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Empty" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Pending" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IncomingStock" Member="IncomingStocks">
+    <Type Name="IncomingStock">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Source" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Filled" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Empty" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stock" Member="Stocks">
+    <Type Name="Stock">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[14.2 cyl]" Member="_14_2_cyl" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[19 cyl]" Member="_19_cyl" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[5.19 cyl]" Member="_5_19_cyl" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Regulator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Trolly" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Stove" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RuberTube" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
